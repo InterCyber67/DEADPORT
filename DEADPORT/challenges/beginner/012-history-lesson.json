@@ -1,0 +1,30 @@
+{
+  "id": "012",
+  "title": "History Lesson",
+  "difficulty": 3,
+  "category": "Forensics",
+  "xp": 250,
+  "target_seconds": 30,
+  "tags": ["history"],
+  "story": [
+    "> SYSTEM ALERT: CRITICAL FAILURE IN /production",
+    "Someone wiped the production database.",
+    "We think it was Bob. We need to know the exact command he ran before he quit.",
+    "Check his command history."
+  ],
+  "objective": "Submit the exact command that wiped the production database.",
+  "answer_format": "STRING",
+  "commands": [],
+  "start": "/",
+  "files": {
+    "/.bash_history": [
+      "ls -la",
+      "cd /var/log",
+      "cat auth.log",
+      "cd /production",
+      "rm -rf /production",
+      "exit"
+    ]
+  },
+  "hints": ["The 'history' command might not show his history if you are a different user. Try looking for hidden files in his home directory or the root directory."]
+}

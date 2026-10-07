@@ -1,0 +1,33 @@
+{
+  "id": "020",
+  "title": "System Compromised",
+  "difficulty": 5,
+  "category": "Boss",
+  "xp": 1000,
+  "target_seconds": 300,
+  "tags": ["find", "grep", "base64", "rot13", "pipes"],
+  "story": [
+    "> CRITICAL ALERT: BOSS LEVEL",
+    "The system has been completely compromised by an unknown entity.",
+    "They hid the deactivation code somewhere in the filesystem.",
+    "You have to find the file containing the word 'PAYLOAD', extract the code, and decode it.",
+    "It's Base64 encoded, and then ROT13 shifted.",
+    "Good luck."
+  ],
+  "objective": "Find the deactivation code and submit it.",
+  "answer_format": "STRING",
+  "commands": ["find", "grep", "base64", "rot13", "cat"],
+  "start": "/",
+  "files": {
+    "/usr/share/nginx/html/index.html": "junk",
+    "/var/log/syslog": "junk",
+    "/tmp/.hidden/malware.sh": "PAYLOAD: FLFHRZ-PBZCEBZVFRQ-NIBEG\nWait, it's base64 first, then rot13? Let's check.",
+    "/tmp/.hidden/actual_payload.txt": "PAYLOAD: RkxGSFJaLVBCWkNFQlpWRlJRLU5JQkVH"
+  },
+  "hints": [
+    "Use 'find' to locate interesting files.",
+    "Use 'grep -r PAYLOAD /' to find the text.",
+    "The encoded string is 'RkxGSFJaLVBCWkNFQlpWRlJRLU5JQkVH'.",
+    "Decode base64 first, then rot13."
+  ]
+}

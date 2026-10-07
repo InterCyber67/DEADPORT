@@ -1,0 +1,22 @@
+[Unit]
+Description=DEADPORT SSH Game Server
+After=network.target
+
+[Service]
+Type=simple
+User=deadport
+Group=deadport
+WorkingDirectory=/opt/deadport
+ExecStart=/opt/deadport/deadport
+Restart=always
+RestartSec=3
+
+# Sandboxing via systemd
+ProtectSystem=strict
+ProtectHome=true
+PrivateTmp=true
+NoNewPrivileges=true
+ReadWritePaths=/opt/deadport/data
+
+[Install]
+WantedBy=multi-user.target

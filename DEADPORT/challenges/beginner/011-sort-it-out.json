@@ -1,0 +1,28 @@
+{
+  "id": "011",
+  "title": "Sort it out",
+  "difficulty": 3,
+  "category": "Data Processing",
+  "xp": 200,
+  "target_seconds": 60,
+  "tags": ["sort", "uniq", "pipes"],
+  "story": [
+    "> INCOMING TICKET",
+    "We have a list of all employees who accessed the server today.",
+    "But the logs are out of order and there are duplicates.",
+    "Find the one employee who accessed it exactly ONE time."
+  ],
+  "objective": "Submit the name of the user who appears exactly once in access.log.",
+  "answer_format": "STRING",
+  "commands": ["sort", "uniq"],
+  "start": "/",
+  "files": {
+    "/access.log": [
+      "alice", "bob", "charlie", "bob", "alice",
+      "dave", "dave", "eve", "eve", "dave",
+      "alice", "TOP-DOG", "charlie", "bob",
+      "eve", "alice", "dave", "charlie", "eve"
+    ]
+  },
+  "hints": ["'uniq' only detects adjacent duplicates. Try sorting the file first with 'sort' and piping it to 'uniq'."]
+}

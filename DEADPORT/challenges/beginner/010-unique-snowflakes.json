@@ -1,0 +1,30 @@
+{
+  "id": "010",
+  "title": "Unique snowflakes",
+  "difficulty": 3,
+  "category": "Data Processing",
+  "xp": 180,
+  "target_seconds": 60,
+  "tags": ["uniq", "pipes"],
+  "story": [
+    "> INCOMING TICKET",
+    "Someone copied the same password 100 times into passwords.txt.",
+    "But one of them is different. It's the real password.",
+    "Find it."
+  ],
+  "objective": "Find the unique line in passwords.txt and submit it.",
+  "answer_format": "STRING",
+  "commands": ["uniq"],
+  "start": "/",
+  "files": {
+    "/passwords.txt": [
+      "PASSWORD-123", "PASSWORD-123", "PASSWORD-123", "PASSWORD-123", "PASSWORD-123",
+      "PASSWORD-123", "PASSWORD-123", "PASSWORD-123", "PASSWORD-123", "PASSWORD-123",
+      "PASSWORD-123", "PASSWORD-123", "PASSWORD-123", "PASSWORD-123", "PASSWORD-123",
+      "PASSWORD-123", "PASSWORD-123", "PASSWORD-123", "PASSWORD-123", "PASSWORD-123",
+      "PASSWORD-123", "PASSWORD-123", "PASSWORD-123", "LONE-WOLF", "PASSWORD-123",
+      "PASSWORD-123", "PASSWORD-123", "PASSWORD-123", "PASSWORD-123", "PASSWORD-123"
+    ]
+  },
+  "hints": ["The 'uniq' command filters out adjacent duplicate lines.", "Try 'uniq -u' to only print unique lines."]
+}

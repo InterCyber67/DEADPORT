@@ -1,0 +1,24 @@
+{
+  "id": "013",
+  "title": "Onion Router",
+  "difficulty": 3,
+  "category": "Cryptography",
+  "xp": 300,
+  "target_seconds": 90,
+  "tags": ["base64", "rot13", "pipes"],
+  "story": [
+    "> INCOMING TRANSMISSION",
+    "We intercepted a highly secure message from the snack committee.",
+    "They used multiple layers of encryption.",
+    "First it was Base64 encoded, and then ROT13 encrypted.",
+    "Or was it the other way around? Just figure it out."
+  ],
+  "objective": "Decode the message in message.txt and submit the secret.",
+  "answer_format": "STRING",
+  "commands": ["base64", "rot13"],
+  "start": "/",
+  "files": {
+    "/message.txt": "T0FWMkIyRUVIRktHWTNZPQ=="
+  },
+  "hints": ["Try chaining commands with pipes. e.g. cat file | base64 decode | rot13"]
+}

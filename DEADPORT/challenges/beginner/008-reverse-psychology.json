@@ -1,0 +1,23 @@
+{
+  "id": "008",
+  "title": "Reverse Psychology",
+  "difficulty": 2,
+  "category": "Cryptography",
+  "xp": 120,
+  "target_seconds": 20,
+  "tags": ["rev", "encoding"],
+  "story": [
+    "> SYSTEM ALERT",
+    "Someone reversed the emergency override code.",
+    "We could read it backwards, but we're too lazy.",
+    "Be a dear and reverse it back for us."
+  ],
+  "objective": "Reverse the string in override.txt and submit the answer.",
+  "answer_format": "STRING",
+  "commands": ["rev"],
+  "start": "/",
+  "files": {
+    "/override.txt": "SDRAWROF-SI-SDRAWKCAB"
+  },
+  "hints": ["The 'rev' command reverses text. Pipe the file into it!"]
+}

@@ -1,0 +1,23 @@
+{
+  "id": "007",
+  "title": "Hexadecimal Mystery",
+  "difficulty": 2,
+  "category": "Cryptography",
+  "xp": 100,
+  "target_seconds": 30,
+  "tags": ["hex", "encoding"],
+  "story": [
+    "> INCOMING MESSAGE FROM HR",
+    "Bob left us a 'hex dump' of his brain before he quit.",
+    "He thinks he's Neo from The Matrix, but he just used a simple hex encoder.",
+    "Find out what his 'brain dump' says."
+  ],
+  "objective": "Decode the hex string in dump.txt and submit the answer.",
+  "answer_format": "STRING",
+  "commands": ["hex"],
+  "start": "/",
+  "files": {
+    "/dump.txt": "43 41 46 45 2d 42 41 42 45 2d 39 39"
+  },
+  "hints": ["Try using the 'hex' command with a pipe, like: cat dump.txt | hex decode"]
+}

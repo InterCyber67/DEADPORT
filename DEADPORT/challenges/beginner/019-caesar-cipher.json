@@ -1,0 +1,23 @@
+{
+  "id": "019",
+  "title": "Et Tu, Bob?",
+  "difficulty": 4,
+  "category": "Cryptography",
+  "xp": 450,
+  "target_seconds": 90,
+  "tags": ["caesar"],
+  "story": [
+    "> HR COMPLAINT",
+    "Bob used a Caesar cipher for his exit interview feedback.",
+    "He claims it's 'military grade encryption'.",
+    "Decode his message so we can properly ignore it."
+  ],
+  "objective": "Decode the message using the caesar command.",
+  "answer_format": "STRING",
+  "commands": ["caesar"],
+  "start": "/",
+  "files": {
+    "/feedback.txt": "QBPVBZ-DHA-OLYL"
+  },
+  "hints": ["The 'caesar' command requires a shift amount. You might have to brute force it (try shifts 1 through 25), or write a loop... wait, you don't have loops in this shell. Just guess! It's shift 7."]
+}

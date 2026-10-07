@@ -1,0 +1,25 @@
+{
+  "id": "016",
+  "title": "Hide and Seek",
+  "difficulty": 4,
+  "category": "Recon",
+  "xp": 350,
+  "target_seconds": 60,
+  "tags": ["find", "name"],
+  "story": [
+    "> INCOMING TICKET",
+    "We lost the master key.",
+    "We know the file is called 'master.key', but we don't know where it is.",
+    "It could be anywhere in the thousands of directories on this server."
+  ],
+  "objective": "Find the file named 'master.key' and submit its contents.",
+  "answer_format": "STRING",
+  "commands": ["find"],
+  "start": "/",
+  "files": {
+    "/usr/share/doc/master.key": "HIDE-AND-SEEK",
+    "/etc/ssl/certs/fake.key": "junk",
+    "/var/www/html/index.html": "junk"
+  },
+  "hints": ["Use 'find / -name master.key' to search by name."]
+}

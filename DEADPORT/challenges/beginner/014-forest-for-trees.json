@@ -1,0 +1,28 @@
+{
+  "id": "014",
+  "title": "Forest for the Trees",
+  "difficulty": 3,
+  "category": "Recon",
+  "xp": 250,
+  "target_seconds": 45,
+  "tags": ["tree"],
+  "story": [
+    "> DEVOPS TICKET",
+    "We lost the backup script. It's somewhere in /var/lib.",
+    "But the directory structure is a mess.",
+    "Can you find the secret key hidden inside it?"
+  ],
+  "objective": "Find the secret key located in one of the files in /var/lib.",
+  "answer_format": "STRING",
+  "commands": ["tree"],
+  "start": "/var",
+  "files": {
+    "/var/lib/apt/lists/lock": "",
+    "/var/lib/dpkg/info/format": "1",
+    "/var/lib/systemd/random-seed": "junk",
+    "/var/lib/mysql/ibdata1": "junk",
+    "/var/lib/secret/backup/keys/master.txt": "SQUIRREL-TREE",
+    "/var/lib/docker/volumes/metadata.db": "junk"
+  },
+  "hints": ["The 'tree' command is great for visualizing complex directory structures."]
+}

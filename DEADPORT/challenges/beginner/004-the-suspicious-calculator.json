@@ -1,0 +1,54 @@
+{
+  "id": "004",
+  "title": "The Suspicious Calculator",
+  "difficulty": 1,
+  "category": "logic",
+  "xp": 100,
+  "target_seconds": 180,
+  "tags": ["bob"],
+  "story": [
+    "Finance is filing taxes using the office calculator.",
+    "The office calculator was 'improved' by Bob last week.",
+    "Finance would like to know, BEFORE filing, what it will say for 7 x 6.",
+    "Finance has asked very politely. Finance has a lawyer."
+  ],
+  "objective": "Work out what Bob's calculator will answer for 7 * 6.",
+  "answer_format": "submit <number>",
+  "start": "/opt/calculator",
+  "files": {
+    "/opt/calculator/history.log": [
+      "CALC-9000 PRO MAX (patched)",
+      "",
+      "2 + 2   = 5",
+      "3 + 3   = 7",
+      "10 + 5  = 16",
+      "4 * 4   = 17",
+      "5 * 3   = 16",
+      "9 - 4   = 6",
+      "100 / 4 = 26",
+      "0 * 0   = 1"
+    ],
+    "/opt/calculator/CHANGELOG.txt": [
+      "v2.0.1 (patched by bob)",
+      " - results are now rounded up 'for morale'",
+      " - removed the 'equals' button (redundant, we have 'enter')",
+      " - added dark mode (the screen is broken)"
+    ],
+    "/opt/calculator/manual.txt": [
+      "Thank you for purchasing CALC-9000 PRO MAX.",
+      "It is a calculator. It calculates.",
+      "If it does not calculate correctly, please do not call us."
+    ]
+  },
+  "answer_hashes": [],
+  "hints": [
+    "Compare each result in history.log with what the answer should be.",
+    "Every single answer is wrong by exactly the same amount.",
+    "7 * 6 = 42. Now apply Bob's 'morale' patch."
+  ],
+  "completion": [
+    "Correct. The calculator says 43.",
+    "Finance has switched to counting on their fingers.",
+    "Accuracy has improved by 100%."
+  ]
+}

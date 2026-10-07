@@ -1,0 +1,23 @@
+{
+  "id": "018",
+  "title": "The Bash Master",
+  "difficulty": 4,
+  "category": "Miscellaneous",
+  "xp": 400,
+  "target_seconds": 45,
+  "tags": ["cat", "pipes"],
+  "story": [
+    "> DEVOPS TICKET",
+    "Bob wrote a script that generates the daily password.",
+    "He obfuscated it by making it print the password in hexadecimal.",
+    "Read the script output or figure it out."
+  ],
+  "objective": "Submit the decoded password.",
+  "answer_format": "STRING",
+  "commands": ["hex"],
+  "start": "/",
+  "files": {
+    "/script.sh": "#!/bin/bash\necho '42 41 53 48 2d 4d 41 53 54 45 52'"
+  },
+  "hints": ["You can't execute the script, but you can read it and pipe it to 'hex decode'."]
+}

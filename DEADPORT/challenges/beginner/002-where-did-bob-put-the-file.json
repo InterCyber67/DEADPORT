@@ -1,0 +1,58 @@
+{
+  "id": "002",
+  "title": "Where Did Bob Put The File?",
+  "difficulty": 1,
+  "category": "filesystem",
+  "xp": 100,
+  "target_seconds": 150,
+  "tags": ["bob"],
+  "story": [
+    "The quarterly report is due in 10 minutes.",
+    "Bob says he put it 'somewhere safe'.",
+    "When asked where, Bob said 'that's the point of safe'.",
+    "Find the real report and read out the report code."
+  ],
+  "objective": "Find Bob's real quarterly report and submit its report code.",
+  "answer_format": "submit <report code>",
+  "start": "/home/bob/documents",
+  "files": {
+    "/home/bob/documents/work/report_draft.txt": [
+      "QUARTERLY REPORT (DRAFT)",
+      "",
+      "This is the draft. The real one is hidden.",
+      "Like my feelings.",
+      "  - bob"
+    ],
+    "/home/bob/documents/work/meeting_notes.txt": [
+      "Meeting about meetings: went well.",
+      "Action item: schedule a follow-up meeting about the meeting."
+    ],
+    "/home/bob/documents/personal/recipes.txt": [
+      "Bob's Famous Cereal",
+      "1. cereal",
+      "2. milk (optional, controversial)"
+    ],
+    "/home/bob/documents/memes/2019/distracted_boyfriend.txt": "Bob has labelled the boyfriend 'me', the girlfriend 'work' and the other woman 'naps'.",
+    "/home/bob/documents/memes/2019/.quarterly_report_FINAL_v7_REAL.txt": [
+      "QUARTERLY REPORT - FINAL - v7 - REAL - USE THIS ONE",
+      "",
+      "Revenue: yes",
+      "Expenses: also yes",
+      "Outlook: concerning",
+      "",
+      "Report code: Q3-PANIC-77"
+    ],
+    "/home/bob/documents/memes/2020/this_is_fine.txt": "The dog is labelled 'production'. The fire is labelled 'also production'."
+  },
+  "answer_hashes": [],
+  "hints": [
+    "Files whose names start with a dot are hidden from a plain ls.",
+    "ls -a shows hidden files. Bob loves his memes folder.",
+    "Try: find / -name \"*report*\""
+  ],
+  "completion": [
+    "Report delivered with 14 seconds to spare.",
+    "Management read only the word 'PANIC' and called an all-hands meeting.",
+    "Bob was promoted. Nobody knows why."
+  ]
+}

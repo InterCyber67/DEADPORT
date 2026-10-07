@@ -1,0 +1,58 @@
+{
+  "id": "005",
+  "title": "Find The Duck",
+  "difficulty": 1,
+  "category": "filesystem",
+  "xp": 100,
+  "target_seconds": 180,
+  "tags": ["duck"],
+  "story": [
+    "The office rubber duck has gone missing.",
+    "Engineering cannot debug anything without explaining it to the duck first.",
+    "Three deploys have failed. Morale is low. Someone is crying in the server room.",
+    "Find the duck. The duck knows the code."
+  ],
+  "objective": "Find the rubber duck and submit the code it is guarding.",
+  "answer_format": "submit <duck code>",
+  "start": "/office",
+  "files": {
+    "/office/lobby/sign.txt": "WELCOME TO DEADPORT. PLEASE DO NOT FEED THE INTERNS.",
+    "/office/floor1/supply_closet/duck_tape.txt": [
+      "This is duct tape.",
+      "Bob labelled it 'duck tape'. It is not a duck.",
+      "Please stop opening this file looking for the duck."
+    ],
+    "/office/floor1/supply_closet/staplers.txt": "There are 41 staplers. Nobody has ever seen a staple.",
+    "/office/floor2/desk_14/drawer.txt": "A single sock and a USB stick labelled 'DO NOT PLUG IN'. Someone has plugged it in.",
+    "/office/floor2/desk_15/drawer.txt": "Seventeen ketchup packets and a resignation letter dated 2014. Still employed.",
+    "/office/floor3/breakroom/microwave.txt": "Someone microwaved fish. HR has been notified. HR has resigned.",
+    "/office/floor3/breakroom/fridge/milk.txt": "Expired. Sentient. Has opinions about tabs versus spaces.",
+    "/office/floor3/breakroom/fridge/.yogurt_from_2021/duck.txt": [
+      "     __",
+      "   <(o )___",
+      "    ( ._> /",
+      "     `---'",
+      "",
+      "You found the duck. It was cold.",
+      "The duck whispers: QUACK-7731"
+    ],
+    "/office/floor3/server_room/README.txt": "It's hot in here. Please don't put the duck in here."
+  },
+  "triggers": {
+    "/office/floor3/breakroom/fridge/.yogurt_from_2021/duck.txt": {
+      "item": "duck",
+      "achievement": "rubber_duck"
+    }
+  },
+  "answer_hashes": [],
+  "hints": [
+    "The duck is not in a place anyone would look on purpose.",
+    "find can search by name: find /office -name \"*duck*\"",
+    "Hidden folders start with a dot. Have you checked the fridge with ls -a?"
+  ],
+  "completion": [
+    "The duck has been returned to Engineering.",
+    "Deploys are succeeding again. Nobody can explain why.",
+    "The duck can. The duck won't."
+  ]
+}

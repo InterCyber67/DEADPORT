@@ -1,0 +1,26 @@
+{
+  "id": "017",
+  "title": "Needle in a Haystack",
+  "difficulty": 4,
+  "category": "Data Processing",
+  "xp": 400,
+  "target_seconds": 90,
+  "tags": ["grep", "recursive"],
+  "story": [
+    "> AUDIT REQUIRED",
+    "A rogue employee left a backdoor password somewhere in the source code.",
+    "The source code has hundreds of files.",
+    "We know the password line contains the word 'BACKDOOR'. Find the password value."
+  ],
+  "objective": "Find the backdoor password and submit it.",
+  "answer_format": "STRING",
+  "commands": ["grep"],
+  "start": "/src",
+  "files": {
+    "/src/main.c": "int main() { return 0; }",
+    "/src/utils.c": "void utils() {}",
+    "/src/auth/login.c": "if (password == 'BACKDOOR: NEEDLE-HAYSTACK') { grant_access(); }",
+    "/src/db/query.c": "SELECT * FROM users;"
+  },
+  "hints": ["Use 'grep -r BACKDOOR /src' to search recursively."]
+}
